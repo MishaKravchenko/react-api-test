@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.container img{
+    width: 100px;
+}
