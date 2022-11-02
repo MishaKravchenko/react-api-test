@@ -12,6 +12,7 @@ const PhotosPage = () => {
         if (fetching) {
             dispatch(getAllPhotos(currentPage))
         }
+        // dispatch(setFetching(false))
     }, [dispatch, fetching, currentPage])
 
     useEffect(() => {
