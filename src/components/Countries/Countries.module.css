@@ -1,10 +1,30 @@
-.container{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+.container{;
+    height: 280px;
+    width: 310px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-.container img{
-    width: 100px;
+.container:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: .500s;
+}
+.box{
+    overflow: hidden;
+    position: relative;
+    height: 160px;
+    border: grey 1px solid;
+}
+.box img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.name{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+.info{
+    padding-left: 15px ;
 }

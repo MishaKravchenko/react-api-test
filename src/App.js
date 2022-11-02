@@ -9,7 +9,7 @@ function App() {
 
     const [countries, setCountries] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [countriesPerPage] = useState(10);
+    const [countriesPerPage] = useState(48);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     const nextPage = () => setCurrentPage(prevState => prevState + 1)
@@ -26,11 +26,15 @@ function App() {
     const currentCountry = countries.slice(firstCountryIndex, lastCountryIndex)
 
     return (
-        <div className="container">
-            {currentCountry.map(country => <Countries key={country.name.common} country={country}/>)}
-            <Pagination countriesPerPage={countriesPerPage} totalCountries={countries.length} paginate={paginate}/>
-            <button onClick={prevPage}>PrevPage</button>
-            <button onClick={nextPage}>NextPage</button>
+        <div className={'wrapper'}>
+            <div className="container">
+                {currentCountry.map(country => <Countries key={country.name.common} country={country}/>)}
+            </div>
+            <div className={"paginate"}>
+                <button className={"btn"} onClick={prevPage}>PrevPage</button>
+                <Pagination countriesPerPage={countriesPerPage} totalCountries={countries.length} paginate={paginate}/>
+                <button className={"btn"} onClick={nextPage}>NextPage</button>
+            </div>
         </div>
     );
 }

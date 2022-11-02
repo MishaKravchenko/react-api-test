@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Pagination.module.css'
 
 const Pagination = ({countriesPerPage, totalCountries, paginate}) => {
     const pageNumbers = []
@@ -9,17 +10,16 @@ const Pagination = ({countriesPerPage, totalCountries, paginate}) => {
 
     return (
         <div>
-            <ul>
-                {
-                    pageNumbers.map(number => (
-                        <li key={number}>
-                            <a href="!#" onClick={()=>paginate(number)}>
-                                {number}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
+
+            {
+                pageNumbers.map(number => (
+                    <div key={number} className={css.pagination}>
+                        <a href="!#" onClick={() => paginate(number)}>
+                            {number}
+                        </a>
+                    </div>
+                ))
+            }
         </div>
     );
 };

@@ -1,5 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 50px;
+    margin: 20px;
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:20px 0 ;
+    gap:80px;
 }
+
+.paginate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #b9c2fc;
+    color: #000000;
+}
+
