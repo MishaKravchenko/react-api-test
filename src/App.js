@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Countries} from "./components/Countries/Countries";
 import {Pagination} from "./components/Pagination/Pagination";
+import {Form} from "./components/Form/Form";
 
 // https://www.youtube.com/watch?v=s59kRbD4Sw8&list=PLkUJHNMBzmtRuSUgA_9g0lmMC_Y1TW2K1&index=12
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
     return (
         <div className={'wrapper'}>
+            <Form/>
             <div className="container">
                 {currentCountry.map(country => <Countries key={country.name.common} country={country}/>)}
             </div>
