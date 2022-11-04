@@ -3,17 +3,24 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Countries} from "./components/Countries/Countries";
 
-// https://www.youtube.com/watch?v=s59kRbD4Sw8&list=PLkUJHNMBzmtRuSUgA_9g0lmMC_Y1TW2K1&index=12
+// https://www.youtube.com/watch?v=cg-CDLLo_fI
 function App() {
 
     const [countries, setCountries] = useState([]);
     const [value, setValue] = useState('');
+    const [isOpen, setIsOpen] = useState(true);
 
     const filteredCountries = countries.filter(country => {
             return country.name.official.toLowerCase().includes(value.toLowerCase())
         }
     )
-
+    const itemClickHandler = (e) => {
+        setValue(e.target.textContent)
+        setIsOpen(!isOpen)
+    }
+    const inputClickHandler = () => {
+        setIsOpen(true)
+    }
 
     useEffect(() => {
         axios.get('https://restcountries.com/v3.1/all')
@@ -22,9 +29,22 @@ function App() {
 
     return (
         <div className={'wrapper'}>
-            <form>
-                <input className="input" type="text" placeholder="Type to Search..."
-                       onChange={(e) => setValue(e.target.value)}/>
+            <form className={"search_form"}>
+                <input className="input"
+                       type="text"
+                       placeholder="Type to Search..."
+                       value={value}
+                       onChange={(e) => setValue(e.target.value)}
+                       onClick={inputClickHandler}/>
+                <ul className="autocomplete">
+                    {value && isOpen ?
+                        filteredCountries.map(country =>
+                            <li className="autocomplete_item"
+                                onClick={itemClickHandler}>
+                                {country.name.official}
+                            </li>)
+                        : null}
+                </ul>
             </form>
             <div className="container">
                 {filteredCountries.map(country => <Countries key={country.name.common} country={country}/>)}
