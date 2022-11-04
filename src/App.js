@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Countries} from "./components/Countries/Countries";
 
-// https://www.youtube.com/watch?v=s59kRbD4Sw8&list=PLkUJHNMBzmtRuSUgA_9g0lmMC_Y1TW2K1&index=12
+// https://www.youtube.com/watch?v=TeZt0UbM270
 function App() {
 
     const [countries, setCountries] = useState([]);
