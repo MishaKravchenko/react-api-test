@@ -14,7 +14,7 @@ import {getPageCount, getPagesArray} from "./utils/pages";
 import {Pagination} from "./components/UI/pagination/Pagination";
 
 function App() {
-
+    // https://www.youtube.com/watch?v=GNrdg3PzpJQ
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState({sort: '', query: ''});
     const [modal, setModal] = useState(false);
