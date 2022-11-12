@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {Post} from "../Post/Post";
 
 const Posts = () => {
-    // https://www.youtube.com/watch?v=Ka3OQpwqxXA
     const [posts, setPosts] = useState([]);
     const [visible, setVisible] = useState(3);
     
