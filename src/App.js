@@ -3,6 +3,7 @@ import {UseBookSearch} from "./hooks/useBookSearch";
 import {useCallback, useRef, useState} from "react";
 
 function App() {
+    // https://www.youtube.com/watch?v=NZKUirTtxcg
     const [query, setQuery] = useState('');
     const [pageNumber, setPageNumber] = useState(1);
 
