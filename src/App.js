@@ -5,7 +5,7 @@ import {Countries} from "./components/Countries/Countries";
 import {Pagination} from "./components/Pagination/Pagination";
 import {Form} from "./components/Form/Form";
 
-// https://www.youtube.com/watch?v=s59kRbD4Sw8&list=PLkUJHNMBzmtRuSUgA_9g0lmMC_Y1TW2K1&index=12
+// https://www.youtube.com/watch?v=s59kRbD4Sw8
 function App() {
 
     const [countries, setCountries] = useState([]);
