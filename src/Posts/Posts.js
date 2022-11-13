@@ -16,7 +16,7 @@ const Posts = () => {
     return (
         <div className='row d-flex justify-content-center'>
             {posts.map(post => <Post key={post.id} user={post}/>)}
-            <div className={limit === 100 ? 'd-none' : 'btn btn-dark w-50'} onClick={loadMore}> Load More</div>
+            <div className={limit === 100 ? 'd-none' : 'btn btn-dark w-25'} onClick={loadMore}> Load More</div>
         </div>
     );
 };
