@@ -2,8 +2,9 @@ import './App.css';
 import {ReadMoreReadLess} from "./components/ReadMoreReadLess/ReadMoreReadLess";
 
 function App() {
+    // https://www.youtube.com/watch?v=Z9olHkHGA7s
     return (
-        <div >
+        <div>
             <ReadMoreReadLess limit={200}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, corporis, culpa cum dolore doloribus
                 dolorum est facilis harum hic inventore ipsa ipsam iure laudantium magni maiores minima minus natus
